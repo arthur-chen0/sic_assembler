@@ -248,7 +248,7 @@ void pass_one(){
 }
 
 void pass_two(){
-    FILE *source = fopen("intermediate.txt", "r");
+    FILE *source = fopen("p1_intermediate.txt", "r");
     FILE *output = fopen("p2_instruction_list.txt", "w");
     FILE *final = fopen("object_program.txt", "w");
 
