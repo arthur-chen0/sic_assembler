@@ -324,8 +324,8 @@ void pass_two(){
 
         if(line == 0){
             if(0 == strcmp("START", instruction.opcode))
-                fprintf(output, "%X\t%s\t%s\t%s\r\n", instruction.addr, instruction.label, instruction.opcode, instruction.operand);
-            fprintf(final, "H^%s\t^%06X^%06X\r\n",instruction.label, instruction.addr, program_length);
+                fprintf(output, "%X\t%s\t%s\t%s\r\n", instruction.addr, instruction.label, instruction.opcode, instruction.operand); //Write first to instruction list file
+            fprintf(final, "H^%s\t^%06X^%06X\r\n",instruction.label, instruction.addr, program_length); //Write header record to object program
             // fprintf(final, "T^%06X^", instruction.addr);
             start_addr = instruction.addr;
             first_addr = instruction.addr;
